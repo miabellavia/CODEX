@@ -1,2 +1,31 @@
 <h1>Teachers#index</h1>
 <p>Find me in app/views/teachers/index.html.erb</p>
+
+<p id="notice"><%= notice %></p>
+<h1>All TAs</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>First Name</th>
+      <th>Last Name</th>
+      <th>Category</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @teachers.each do |teacher| %>
+      <tr>
+        <td><%= teacher.user.first_name %></td>
+        <td><%= teacher.user.last_name %></td>
+        <td><%= teacher.category %></td>
+        <td><%= link_to 'Show', teacher %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'Home', root_path %>
