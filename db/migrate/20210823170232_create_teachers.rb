@@ -3,7 +3,7 @@ class CreateTeachers < ActiveRecord::Migration[6.0]
     create_table :teachers do |t|
       t.string :category
       t.text :description
-      t.references :user_id, null: false, foreign_key: true
+      t.references :user, null: false, foreign_key: true
 
       t.timestamps
     end
