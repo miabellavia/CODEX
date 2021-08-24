@@ -1,4 +1,4 @@
-.container {
+.custom-container {
     background-color: #ab87ff52 ;
     background-size: 1400px 700px;
     background-position: 30%;
@@ -147,22 +147,7 @@
     max-width:100%;
   }
   
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
+
   
   /*---------    Contact Form    ------------*/
   
@@ -225,14 +210,14 @@
     font-family: raleway;
   }
   
-  #form {
+  #form-one {
     position: relative;
     width: 100%;
     margin: 0px auto 0px auto;
     font-family: raleway;
   }
   
-  input {
+  .topBefore {
     font-family: raleway;
     font-size: 15px;
     width: 100%;
@@ -249,7 +234,7 @@
     -ms-transition: all 0.9s ease-in-out;
   }
   
-  input:hover {
+  .topBefore:hover {
     background: #ccc;
     color: #fff;
     font-family: raleway;
