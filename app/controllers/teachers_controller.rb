@@ -6,15 +6,14 @@ class TeachersController < ApplicationController
   end
 
   def new
-    # @user = User.find(params[:id])
     @teacher = Teacher.new
   end
 
   def create
     @teacher = Teacher.new(teacher_params)
-    
+    @teacher.user = current_user
     if @teacher.save
-      redirect_to teacher_path(@teacher), notice: 'Your teacher profile was successfully created.'
+      redirect_to @teacher, notice: 'Your teacher profile was successfully created.'
     else
       render :new
     end
@@ -50,6 +49,6 @@ class TeachersController < ApplicationController
   end
 
   def teacher_params
-    params.require(:teacher).permit(:description, :category, :user_id)
+    params.require(:teacher).permit(:description, :category)
   end
 end
