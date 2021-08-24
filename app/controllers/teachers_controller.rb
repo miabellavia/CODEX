@@ -6,7 +6,7 @@ class TeachersController < ApplicationController
   end
 
   def new
-    @user = User.find(params[:id])
+    # @user = User.find(params[:id])
     @teacher = Teacher.new
   end
 
@@ -51,4 +51,5 @@ class TeachersController < ApplicationController
 
   def teacher_params
     params.require(:teacher).permit(:description, :category, :user_id)
+  end
 end
