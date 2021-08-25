@@ -34,14 +34,14 @@ body {
   margin-top: 16px;
 }
 
-p {
+.cards p {
   margin-top: 10px;
   color: white;
   font-size: 24px;
   color: white;
 }
 
-p :hover {
+.cards p :hover {
   color: #AB87FF;
 }
 
@@ -49,10 +49,17 @@ h4 {
   display: inline-block;
   margin-top: 50px;
   color: black;
+  margin-bottom: 30px;
 }
 
 img {
   width: 100%;
+}
+
+.search-bar {
+  display: flex;
+  justify-content: space-evenly;
+  color: white;
 }
 
 .search-bar p {
@@ -61,4 +68,9 @@ img {
   margin-right: 20px;
   margin-bottom: 10px;
   margin-top: -200px;
+  font-size: 50px;
+}
+
+.search-bar :hover{
+  color: #AB87FF;
 }
