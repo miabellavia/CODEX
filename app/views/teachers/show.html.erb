@@ -1,0 +1,72 @@
+<div class="custom-container" class="container">
+  <div class="box">
+    <div id="overlay">
+     <%= image_tag "https://kitt.lewagon.com/placeholder/users/#{current_user.username}", class: "image" %>
+        <div class="trick">
+      </div>
+      </div>
+      <ul class="text"><%= @teacher.user.first_name.capitalize %> <%= @teacher.user.last_name.capitalize %></ul>
+      <div class="text1"><%= @teacher.category %></div>
+
+
+
+
+ <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+   <div class="panel panel-default">
+     <div class="panel-heading " role="tab" id="headingOne">
+       <h4 class="panel-title ">
+         <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="" aria-controls="collapseOne">
+           <div class="title  btn btn-danger btn-outline btn-lg">DESCRIPTION OF <%= @teacher.user.first_name.upcase %></div>
+         </a>
+       </h4>
+     </div>
+     <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+       <div class="panel-body">
+         <%= @teacher.description.capitalize %>
+       </div>
+     </div>
+   </div>
+   <%= link_to 'Book', new_teacher_booking_path(@teacher) %>
+   <%# <div class="panel panel-default">
+     <div class="panel-heading" role="tab" id="headingTwo">
+       <h4 class="panel-title">
+         <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+           <div class="title btn btn-danger btn-outline btn-lg">SOCIAL</div>
+         </a>
+       </h4>
+     </div>
+     <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+       <div class="panel-body">
+         Walter has been building websites for years. He enjoys making unique websites and web projects. His hobbies include photography, woodworking, leatherworking, fishing, and mid century modern furniture.
+       </div>
+     </div>
+   </div> %>
+   <div class="panel panel-default">
+     <div class="panel-heading" role="tab" id="headingThree">
+       <h4 class="panel-title">
+         <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+           <div class="title btn btn-danger btn-outline btn-lg">Availability</div>
+         </a>
+       </h4>
+     </div>
+     <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+       <div class="panel-body">
+
+
+
+                   <form id="form-one" class="topBefore">
+
+             <input id="name" type="text" placeholder="NAME">
+             <input id="email" type="text" placeholder="E-MAIL">
+             <textarea id="message" type="text" placeholder="MESSAGE"></textarea>
+             <input id="submit" type="submit" value="Submit Now!">
+
+           </form>
+       </div>
+     </div>
+   </div>
+ </div>
+</div>
+</div>
+<%= link_to 'Back to the home page', root_path, class: "btn btn-primary" %>
+<%= link_to 'Choose a different TA', teachers_path, class: "btn btn-primary" %>
