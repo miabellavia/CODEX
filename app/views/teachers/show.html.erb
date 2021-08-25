@@ -5,8 +5,8 @@
         <div class="trick">
       </div>
       </div>
-      <ul class="text"><%= @teacher.user.first_name.capitalize %> <%= @teacher.user.last_name.capitalize %></ul>
-      <div class="text1"><%= @teacher.category %></div>
+      <ul class="text" id="name"><%= @teacher.user.first_name.capitalize %> <%= @teacher.user.last_name.capitalize %></ul>
+      <div class="text" id="category"><%= @teacher.category %></div>
 
 
 
@@ -26,7 +26,6 @@
        </div>
      </div>
    </div>
-   <%= link_to 'Book', new_teacher_booking_path(@teacher) %>
    <%# <div class="panel panel-default">
      <div class="panel-heading" role="tab" id="headingTwo">
        <h4 class="panel-title">
@@ -45,23 +44,14 @@
      <div class="panel-heading" role="tab" id="headingThree">
        <h4 class="panel-title">
          <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-           <div class="title btn btn-danger btn-outline btn-lg">Availability</div>
+           <div class="title btn btn-danger btn-outline btn-lg">Book this TA now</div>
          </a>
        </h4>
      </div>
      <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
        <div class="panel-body">
+          <%= link_to 'Book', new_teacher_booking_path(@teacher), class: "btn btn-primary w-100" %>
 
-
-
-                   <form id="form-one" class="topBefore">
-
-             <input id="name" type="text" placeholder="NAME">
-             <input id="email" type="text" placeholder="E-MAIL">
-             <textarea id="message" type="text" placeholder="MESSAGE"></textarea>
-             <input id="submit" type="submit" value="Submit Now!">
-
-           </form>
        </div>
      </div>
    </div>

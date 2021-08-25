@@ -8,3 +8,38 @@
 <% else %>
   <% link_to 'Register yourself as a TA', new_teacher_path, class: "btn btn-primary" %>
 <% end %>
+
+  <div class="homepage-banner">
+    <div class="background-image">
+      <%= image_tag asset_path('background-image-homepage.png') %>
+    </div>
+  </div>
+<div class="body">
+      <div class="search-bar">
+        <p>What?</p> <p>When?</p>
+      </div>
+  <div class="subheading">
+    <h4>What do you want to learn?</h4>
+  </div>
+
+  <div class="cards">
+    <p>Front-end Development</p>
+    <p>Back-end Development</p>
+    <p>Full stack Development</p>
+  </div>
+
+  <div class="subheading">
+    <h4>Some of our TA's...</h4>
+  </div>
+
+  <div class="taButton">
+  <%= link_to 'See all the TAs we have', teachers_path, class: "btn btn-primary" %>
+  </div>
+
+  <% if user_signed_in? %>
+  <%= link_to 'Register yourself as a TA', new_teacher_path, class: "btn btn-primary" %>
+  <% else %>
+  <% link_to 'Register yourself as a TA', new_teacher_path, class: "btn btn-primary" %>
+  <% end %>
+</div>
+

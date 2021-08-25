@@ -1,3 +1,4 @@
+
 <%= simple_form_for(@teacher) do |f| %>
   <%= f.error_notification %>
   <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
@@ -12,3 +13,19 @@
   </div>
   </div>
 <% end %>
+
+<div class='form'>
+  <div class="container">
+<h3>Make yourself a TA</h3>
+<br>
+  <%= simple_form_for(@teacher) do |f| %>
+    <%= f.input :description, class: 'input-new', placeholder: 'Please enter a description about yourself', label: false  %>
+    <%= f.select :category, Teacher::CATEGORIES %>
+<div>
+  <br>
+    <%= f.button :submit, class: 'btn btn-primary'%>
+  </div>
+  </div>
+  <% end %>
+  </div>
+
