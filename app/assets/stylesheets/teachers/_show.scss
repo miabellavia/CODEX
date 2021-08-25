@@ -7,7 +7,7 @@
   }
   
   
-  .text {
+  #name {
     font-family: raleway;
     font-size: 40px;
     position: absolute center;
@@ -17,7 +17,7 @@
     margin-top: 43px;
   }
   
-  .text1 {
+  #category {
     font-family: raleway;
     font-size: 21px;
     text-align: center;
@@ -85,10 +85,6 @@
     opacity: 1;
   }
   
-  
-  
-  
-  
   .panel-group{
     width:350px;
     margin:auto;
@@ -120,11 +116,6 @@
   }
   
   
-  
-  
-  
-  
-  
   .btn-outline {
     color: inherit;
     transition: all 1.4s;
@@ -149,135 +140,4 @@
   
 
   
-  /*---------    Contact Form    ------------*/
   
-  input::-webkit-input-placeholder,
-  textarea::-webkit-input-placeholder {
-    color: #000;
-    font-size: 15px;
-  }
-  /* on hover placeholder */
-  
-  input:hover::-webkit-input-placeholder,
-  textarea:hover::-webkit-input-placeholder {
-    color: #fff;
-    font-size: 15px;
-    font-family: raleway;
-  }
-  
-  input:hover:focus::-webkit-input-placeholder,
-  textarea:hover:focus::-webkit-input-placeholder {
-    color: #fff;
-    font-family: raleway;
-  }
-  
-  input:hover::-moz-placeholder,
-  textarea:hover::-moz-placeholder {
-    color: #fff;
-    font-size: 15px;
-    font-family: raleway;
-  }
-  
-  input:hover:focus::-moz-placeholder,
-  textarea:hover:focus::-moz-placeholder {
-    color: #fff;
-    font-family: raleway;
-  }
-  
-  input:hover::placeholder,
-  textarea:hover::placeholder {
-    color: #fff;
-    font-size: 15px;
-    font-family: raleway;
-  }
-  
-  input:hover:focus::placeholder,
-  textarea:hover:focus::placeholder {
-    color: #fff;
-    font-family: raleway;
-  }
-  
-  input:hover::placeholder,
-  textarea:hover::placeholder {
-    color: #fff;
-    font-size: 15px;
-    font-family: raleway;
-  }
-  
-  input:hover:focus::-ms-placeholder,
-  textarea:hover::focus:-ms-placeholder {
-    color: #fff;
-    font-family: raleway;
-  }
-  
-  #form-one {
-    position: relative;
-    width: 100%;
-    margin: 0px auto 0px auto;
-    font-family: raleway;
-  }
-  
-  .topBefore {
-    font-family: raleway;
-    font-size: 15px;
-    width: 100%;
-    height: 50px;
-    padding: 0px 12px 0px 12px;
-    background: transparent;
-    outline: none;
-    color: #726659;
-    border: solid 1px #eee;
-    border-bottom: none;
-    transition: all 0.9s ease-in-out;
-    -webkit-transition: all 0.9s ease-in-out;
-    -moz-transition: all 0.9s ease-in-out;
-    -ms-transition: all 0.9s ease-in-out;
-  }
-  
-  .topBefore:hover {
-    background: #ccc;
-    color: #fff;
-    font-family: raleway;
-  }
-  
-  textarea {
-    width: 100%;
-    max-width: 100%;
-    height: 110px;
-    max-height: 110px;
-    padding: 15px;
-    background: transparent;
-    outline: none;
-    color: #000;
-    font-family: raleway;
-    font-size: 25px;
-    border: solid 1px #eee;
-    transition: all 0.9s ease-in-out;
-    -webkit-transition: all 0.9s ease-in-out;
-    -moz-transition: all 0.9s ease-in-out;
-    -ms-transition: all 0.9s ease-in-out;
-  }
-  
-  textarea:hover {
-    background: #ccc;
-    color: #fff;
-    font-family: raleway;
-  }
-  
-  #submit {
-    width: 100%;
-    padding: 0;
-    font-family: raleway;
-    font-size: 20px;
-    color: #000;
-    outline: none;
-    cursor: pointer;
-    border: solid 1px #eee;
-    border-top: none;
-    margin-bottom: 0px;
-  }
-  
-  #submit:hover {
-    color: #fff;
-    background-color: #ccc;
-  }
