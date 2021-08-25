@@ -1,3 +1,13 @@
+<h1>Pages#home</h1>
+<p>Find me in app/views/pages/home.html.erb</p>
+
+<% if user_signed_in? %>
+  <%= link_to 'See all the TAs we have', teachers_path, class: "btn btn-primary" %>
+  <%= link_to 'Register yourself as a TA', new_teacher_path, class: "btn btn-primary" %>
+
+<% else %>
+  <% link_to 'Register yourself as a TA', new_teacher_path, class: "btn btn-primary" %>
+<% end %>
 
   <div class="homepage-banner">
     <div class="background-image">
@@ -32,3 +42,4 @@
   <% link_to 'Register yourself as a TA', new_teacher_path, class: "btn btn-primary" %>
   <% end %>
 </div>
+
