@@ -1,1 +1,64 @@
 // Specific CSS for your home-page
+body {
+  height: 100%;
+  text-align: center;
+  background-color: white;
+  color: black;
+}
+
+.subheading {
+  font-family: sans-serif;
+}
+
+.homepage-banner {
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  width: 100%;
+}
+
+.background-image {
+  height: 100%;
+  width: 100%;
+  margin-bottom: 0px;
+}
+
+.cards {
+  display: flex;
+  justify-content: space-evenly;
+  background-color: black;
+  margin-left: 16px;
+  margin-right: 16px;
+  border-radius: 20px;
+  height: 400px;
+  margin-top: 16px;
+}
+
+p {
+  margin-top: 10px;
+  color: white;
+  font-size: 24px;
+  color: white;
+}
+
+p :hover {
+  color: #AB87FF;
+}
+
+h4 {
+  display: inline-block;
+  margin-top: 50px;
+  color: black;
+}
+
+img {
+  width: 100%;
+}
+
+.search-bar p {
+  display: inline-block;
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-bottom: 10px;
+  margin-top: -200px;
+}
