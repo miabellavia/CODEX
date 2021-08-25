@@ -1,26 +1,30 @@
 class BookingsController < ApplicationController
-  before_action :set_user, only: [:index, :show, :edit, :destroy]
-
   def index
-    @bookings = Booking.where(user: @user)
+    @bookings = current_user.bookings #.where('start_time >= ?', Time.current)
+
+    # if params[:start_time]
+    #   @bookings = @bookings.where('start_time >= ?', params[:start_time])
+    # end
   end
 
   def show
-    @booking = Booking.find(params[:id])
+    @booking = current_user.bookings.find(params[:id])
   end
 
   def destroy
-    @booking = Booking.find(params[:id])
-    @booking.destroy
-    redirect_to bookings_path(@user)
+    current_user.bookings.find(params[:id]).destroy
+    redirect_to bookings_path
   end
 
   def new
-    @booking = Booking.new
+    @teacher = Teacher.find(params[:teacher_id])
+    @booking = @teacher.bookings.new
   end
 
   def create
-    @booking = Booking.new(booking_params)
+    @teacher = Teacher.find(params[:teacher_id])
+    @booking = current_user.bookings.new(booking_params)
+    @booking.teacher = @teacher
     if @booking.save
       redirect_to booking_path(@booking), notice: 'You created a new Booking!'
     else
@@ -38,11 +42,7 @@ class BookingsController < ApplicationController
 
   private
 
-  def set_user
-    @user = User.find(params[:user_id]
-  end
-
   def booking_params
-    params.require(:booking).permit(:start_time, :end_time, :teacher_id)
+    params.require(:booking).permit(:start_time, :end_time)
   end
 end
