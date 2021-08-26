@@ -6,8 +6,11 @@
       </div>
       </div>
       <ul class="text" id="name"><%= @teacher.user.first_name.capitalize %> <%= @teacher.user.last_name.capitalize %></ul>
+      <br>
       <div class="text" id="category"><%= @teacher.category %></div>
+      <br>
       <div class="text" id="price"><%= "£#{@teacher.price} per day" %></div>
+      <br>
 
 
 
@@ -26,6 +29,7 @@
          <%= @teacher.description.capitalize %>
        </div>
      </div>
+     
    </div>
    <div class="panel panel-default">
      <div class="panel-heading" role="tab" id="headingThree">
