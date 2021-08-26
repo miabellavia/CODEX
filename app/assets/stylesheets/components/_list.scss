@@ -1,0 +1,70 @@
+// .list-booking {
+
+// }
+
+// .list-container {
+//   width: 600px;
+//   height: 150vh;
+// }
+
+.list {
+  display: flex;
+  flex-wrap: wrap;
+  flex-grow: 1;
+  align-items: center;
+  margin-bottom: 8px;
+  background: rgb(0, 0, 0);
+  padding: 8px 16px;
+  border: 1px solid rgb(235,235,235);
+}
+
+.list-item {
+  display: flex;
+  flex-wrap: wrap;
+  flex-grow: 1;
+  align-items: center;
+  margin-bottom: 8px;
+  background: rgb(0, 0, 0);
+  padding: 8px 16px;
+  border: 1px solid rgb(235,235,235);
+}
+
+
+.list .list-content {
+  flex-grow: 1;
+  margin-left: 20px;
+  margin-right: 20px;
+  text-align: start;
+}
+
+.list p {
+  margin: 0;
+  line-height: 1.4;
+}
+
+.list small {
+  color: #999999;
+  font-weight: bold;
+}
+.list .list-actions {
+  opacity: 0;
+  display: flex;
+  transition: ease .3s;
+}
+
+.list-item:hover .list-actions {
+  opacity: 1;
+}
+
+.list .list-actions a {
+  color: #999999;
+  font-size: 14px
+}
+
+.list .list-actions a + a {
+  margin-left: 16px;
+}
+
+.list .list-actions a:hover {
+  color: #555555;
+}
