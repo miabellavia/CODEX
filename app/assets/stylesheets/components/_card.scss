@@ -1,10 +1,10 @@
-.card-category {
+.teacher_card-category {
   background-size: cover;
   background-position: center;
   height: 180px;
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-end;
   color: white;
   font-size: 16px;
   font-weight: bold;
@@ -15,12 +15,19 @@
   position: relative;
 }
 
-.card-category a {
+.teacher_card-category a {
   text-decoration: none;
   color: white;
 }
-.cards {
+
+.teacher_cards {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-gap: 16px;
+}
+
+.teacher_card_text {
+  text-decoration: none;
+  position: absolute;
+  top: 300px;
 }
