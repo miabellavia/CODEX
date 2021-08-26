@@ -1,6 +1,11 @@
 class BookingsController < ApplicationController
   def index
     @bookings = current_user.bookings #.where('start_time >= ?', Time.current)
+    if @bookings.empty?
+      redirect_to teachers_path, notice: 'You do not have any bookings yet.'
+    else
+      @bookings
+    end
 
     # if params[:start_time]
     #   @bookings = @bookings.where('start_time >= ?', params[:start_time])
@@ -9,6 +14,8 @@ class BookingsController < ApplicationController
 
   def show
     @booking = current_user.bookings.find(params[:id])
+    # @teacher = Teacher.find(params[:teacher_id])
+    # @booking.teacher = @teacher
   end
 
   def destroy
@@ -26,7 +33,7 @@ class BookingsController < ApplicationController
     @booking = current_user.bookings.new(booking_params)
     @booking.teacher = @teacher
     if @booking.save
-      redirect_to booking_path(@booking), notice: 'You created a new Booking!'
+      redirect_to teacher_dashboard_path(current_user), notice: 'You created a new Booking!'
     else
       render :new
     end
@@ -37,7 +44,7 @@ class BookingsController < ApplicationController
 
   def update
     @booking.update(booking_params)
-    redirect_to booking_path(@booking), notice: 'The booking is updated.'
+    redirect_to teacher_dashboard_path(current_user), notice: 'The booking is updated.'
   end
 
   private

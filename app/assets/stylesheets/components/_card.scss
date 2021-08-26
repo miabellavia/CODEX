@@ -1,4 +1,5 @@
 .teacher_card-category {
+  margin: 40px 16px 20px 16px;
   background-size: cover;
   background-position: center;
   height: 180px;
@@ -15,19 +16,20 @@
   position: relative;
 }
 
-.teacher_card-category a {
+.teacher_card-category:hover {
   text-decoration: none;
-  color: white;
+  color: rgb(255, 255, 255);
+  align-items: center;
+  font-size: x-large;
 }
 
 .teacher_cards {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-gap: 16px;
 }
 
 .teacher_card_text {
-  text-decoration: none;
   position: absolute;
   top: 300px;
 }
