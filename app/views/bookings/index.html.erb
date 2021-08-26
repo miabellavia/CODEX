@@ -1,6 +1,6 @@
 <h1>Hello Here are all my bookings</h1>
 
-<% @bookings.each do |booking| %>
+<%= @bookings.each do |booking| %>
   <div>
     <%= booking %>
     <%= link_to '✎ Edit Booking', edit_booking_path(booking) %>

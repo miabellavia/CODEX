@@ -13,28 +13,31 @@ class TeachersController < ApplicationController
     @teacher = Teacher.new(teacher_params)
     @teacher.user = current_user
     if @teacher.save
-      redirect_to @teacher, notice: 'Your teacher profile was successfully created.'
+      redirect_to teacher_path(@teacher), notice: 'Your teacher profile was successfully created.'
     else
       render :new
     end
   end
 
   def edit
+    @teacher = Teacher.find(params[:id])
   end
-  
+
   def update
     if @teacher.update(teacher_params)
-      redirect_to @teacher, notice: 'Your teacher profile was successfully updated.'
+      redirect_to teacher_path(@teacher), notice: 'Your teacher profile was successfully updated.'
     else
       render :edit
     end
   end
 
-  def show
+  def dashboard
+    @user = current_user
+    @bookings = Booking.all
   end
 
-  def dashboard
-    @booking = Booking.find(params[:id])
+  def show
+    @teacher = Teacher.find(params[:id])
   end
 
   def destroy
@@ -42,13 +45,13 @@ class TeachersController < ApplicationController
     redirect_to root_path, notice: 'You have successfully deleted your teacher profile.'
   end
 
-  private 
+  private
 
   def set_teacher
     @teacher = Teacher.find(params[:id])
   end
 
   def teacher_params
-    params.require(:teacher).permit(:description, :category)
+    params.require(:teacher).permit(:description, :category, :price)
   end
 end

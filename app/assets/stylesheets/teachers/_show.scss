@@ -1,3 +1,5 @@
+
+
 #show-page {
     background-color: black ;
     background-size: 1400px 700px;
@@ -5,8 +7,8 @@
     background-attachment: fixed;
     padding-top: 60px;
   }
-  
-  
+
+
   #name {
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     font-size: 40px;
@@ -16,6 +18,7 @@
     color: white;
     margin-top: 43px;
   }
+
 
   .panel-body {
     color: white;
@@ -30,12 +33,12 @@
     margin-top: -20px;
     color:white;
   }
-  
+
   .image {
     text-align: center;
     width: 200px;
     /* Container's dimensions */
-    
+
     height: 200px;
     border-radius: 75%;
     -moz-border-radius: 75%;
@@ -50,33 +53,33 @@
     margin-left: auto;
     margin-right: auto;
   }
-  
-  
-  
+
+
+
   .trick {
     display: inline-block;
     vertical-align: middle;
     height: 150px;
   }
-  
+
   .image:hover {
     box-shadow: 0px 5px 20px .9px #3F3F3F;
   }
-  
+
   .image:hover {
     -webkit-transform: scale(1.12);
     transform: scale(1.12);
     -webkit-transition: 1.6s ease-in-out;
     transition: 1.6s ease-in-out;
   }
-  
-  
-  
+
+
+
   .trick:hover img {
     -webkit-transform: scale(1);
     transform: scale(1);
   }
-  
+
   #overlay {
     -webkit-border-radius: 50%;
     -moz-border-radius: 50%;
@@ -86,20 +89,20 @@
     -moz-transition: opacity 10.25s ease;
     height: 175px;
   }
-  
+
   #box:hover #overlay {
     opacity: 1;
   }
-  
+
   #accordion {
     width:700px;
+
     margin:auto;
     /*margin:50px 400px 50px 400px;*/
     max-width:100%;
     border-radius: 16px !important;
     margin-bottom: 24px;
   }
-  
   .panel-title {
     margin-bottom: 10px !important;
   }
@@ -107,7 +110,7 @@
   .panel-heading{
     background-color:transparent !important;
   }
-  
+
   .title{
     text-align: center;
     background-color:transparent;
@@ -118,20 +121,17 @@
     max-width:100%;
   }
 
-  
-
   #buttond {
     margin-top: 10px;
   }
-  
-  
+    
   .btn-outline {
     color: inherit;
     transition: all 1.4s;
     background-color: transparent;
   }
   /* button CSS */
-  
+
   .btn-danger.btn-outline {
     margin-top: 9px;
     background-color: white;
@@ -167,4 +167,9 @@
   .path-buttons:hover {
     text-decoration: none;
     color: rgb(202, 201, 201);
+  }
+
+  #price {
+    color: white;
+    font-size: 14px;
   }

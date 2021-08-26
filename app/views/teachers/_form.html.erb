@@ -1,29 +1,14 @@
-
-<%= simple_form_for(@teacher) do |f| %>
-  <%= f.error_notification %>
-  <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
-  <div class="container">
-    <div class="form-inputs">
-      <%= f.input :description %>
-      <%= f.select :category, Teacher::CATEGORIES%>
-    </div>
-
-  <div class="form-actions">
-    <%= f.button :submit %>
-  </div>
-  </div>
-<% end %>
-
 <div class='form'>
-  <div class="container">
-<h3>Make yourself a TA</h3>
+<div class="container">
+<h3 class="pt-5 text-white">Make yourself a TA</h3>
 <br>
   <%= simple_form_for(@teacher) do |f| %>
     <%= f.input :description, class: 'input-new', placeholder: 'Please enter a description about yourself', label: false  %>
-    <%= f.select :category, Teacher::CATEGORIES %>
+    <%= f.input :price, class: 'input-new', placeholder: 'What price do you charge per day? (Input in GBP)', label: false %>
+    <%= f.select :category, Teacher::CATEGORIES, label: 'What do you specialise in?' %>
 <div>
   <br>
-    <%= f.button :submit, class: 'btn btn-primary'%>
+    <%= f.button :submit, class: 'path-buttons'%>
   </div>
   </div>
   <% end %>
