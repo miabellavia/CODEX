@@ -34,6 +34,7 @@ class TeachersController < ApplicationController
   def dashboard
     @user = current_user
     @bookings = Booking.all
+    @teacher = Teacher.find(params[:teacher_id])
   end
 
   def show
