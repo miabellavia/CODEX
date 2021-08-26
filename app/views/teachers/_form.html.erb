@@ -4,8 +4,8 @@
 <br>
   <%= simple_form_for(@teacher) do |f| %>
     <%= f.input :description, class: 'input-new', placeholder: 'Please enter a description about yourself', label: false  %>
-    <%= f.input :price, class: 'input-new', placeholder: 'What price do you charge per day?', label: false%>
-    <%= f.select :category, Teacher::CATEGORIES, class: 'w-100' %>
+    <%= f.input :price, class: 'input-new', placeholder: 'What price do you charge per day? (Input in GBP)', label: false %>
+    <%= f.select :category, Teacher::CATEGORIES, label: 'What do you specialise in?' %>
 <div>
   <br>
     <%= f.button :submit, class: 'path-buttons'%>
