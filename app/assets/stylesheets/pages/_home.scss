@@ -2,12 +2,12 @@
 body {
   height: 100%;
   text-align: center;
-  background-color: white;
+  background-color: black;
   color: black;
 }
 
-.subheading {
-  font-family: sans-serif;
+img {
+  width: 100%;
 }
 
 .homepage-banner {
@@ -22,53 +22,183 @@ body {
   width: 100%;
 }
 
-.cards {
-  display: flex;
-  justify-content: space-evenly;
-  background-color: black;
-  margin-left: 16px;
-  margin-right: 16px;
-  border-radius: 20px;
-  height: 400px;
-  margin-top: 16px;
-}
-
-.cards p {
-  margin-top: 10px;
-  color: white;
-  font-size: 24px;
-  color: white;
-}
-
-.cards p :hover {
-  color: #AB87FF;
-}
-
-h4 {
-  display: inline-block;
-  color: black;
-  margin-bottom: 30px;
-}
-
-img {
-  width: 100%;
-}
-
 .search-bar {
   display: flex;
   justify-content: space-evenly;
   color: white;
 }
 
-.search-bar p {
+.search-bar :hover{
+  color: #AB87FF;
+  text-decoration: none;
+}
+
+.button1 {
   display: inline-block;
   margin-left: 20px;
   margin-right: 20px;
-  margin-bottom: 100px;
-  margin-top: -200px;
-  font-size: 50px;
+  margin-top: -350px;
+  font-size: 40px;
+  list-style: none;
+  color: white;
 }
 
-.search-bar :hover{
+.button2 {
+  display: inline-block;
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-top: -350px;
+  font-size: 40px;
+  list-style: none;
+  color: white;
+}
+
+.subheading {
+  font-family: sans-serif;
+}
+
+.cards {
+  display: flex;
+  justify-content: space-evenly;
+  background-color: #777777;
+  align-items: center;
+  margin-left: 100px;
+  margin-right: 100px;
+  border-radius: 20px;
+  height: 400px;
+  margin-bottom: 100px;
+}
+
+h4 {
+  display: inline-block;
+  color: white;
+  margin-bottom: 100px;
+  margin-top: -100px;
+  font-size: 30px;
+}
+
+.card1 {
+  font-size: 20px;
+  background-color: black;
+  height: 350px;
+  width: 380px;
+  border-radius: 20px;
+  list-style: none;
+  text-transform: capitalize;
+  margin-top: 180px;
+  margin-bottom: 180px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.card1 :hover {
   color: #AB87FF;
+  text-decoration: none;
+}
+
+.card2{
+  font-size: 20px;
+  color: black;
+  background-color: black;
+  height: 350px;
+  width: 380px;
+  border-radius: 20px;
+  list-style: none;
+  text-transform: capitalize;
+  margin-top: 180px;
+  margin-bottom: 180px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.card2 :hover {
+  color: #AB87FF;
+  text-decoration: none;
+}
+
+.card3 {
+  font-size: 20px;
+  color: black;
+  background-color: black;
+  height: 350px;
+  width: 380px;
+  border-radius: 20px;
+  list-style: none;
+  text-transform: capitalize;
+  margin-top: 180px;
+  margin-bottom: 180px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.card3 :hover {
+  color: #AB87FF;
+  text-decoration: none;
+}
+
+a {
+  color: white;
+}
+
+.list-of-TAs {
+  display: flex;
+  align-content: center;
+  justify-content: space-evenly;
+}
+
+.TA-one {
+  width: 200px;
+}
+
+.TA-one h5 {
+  margin-top: 20px;
+  color: white;
+}
+
+.TA-one p {
+  color: white;
+
+}
+
+.TA-two {
+  width: 200px;
+}
+
+.TA-two h5 {
+  margin-top: 20px;
+  color: white;
+}
+
+.TA-two p {
+  color: white;
+
+}
+
+.TA-three {
+  width: 200px;
+}
+
+.TA-three h5 {
+  margin-top: 20px;
+  color: white;
+}
+
+.TA-three p {
+  color: white;
+}
+
+.TA-four {
+  width: 200px;
+}
+
+.TA-four h5 {
+  margin-top: 20px;
+  color: white;
+}
+
+.TA-four p {
+  color: white;
 }

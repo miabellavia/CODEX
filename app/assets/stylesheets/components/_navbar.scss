@@ -19,12 +19,17 @@
   font-size: 16px;
   justify-content: center;
   text-align: center;
-  background-color: black;
+  background-color: rgba($color: #AB87FF, $alpha: 0.6);
   width: 120px;
   height: 40px;
   margin: 5px;
   border-radius: 25px;
   margin-left: 1100px;
+}
+
+.nav-item1 :hover {
+  background-color: #49CFCD;
+  border-radius: 25px;
 }
 
 .nav-item2 {
@@ -33,10 +38,15 @@
   font-size: 16px;
   justify-content: center;
   text-align: center;
-  background-color: black;
+  background-color: rgba($color: #AB87FF, $alpha: 0.6);
   width: 120px;
   height: 40px;
   margin: 5px;
+  border-radius: 25px;
+}
+
+.nav-item2 :hover {
+  background-color: #49CFCD;
   border-radius: 25px;
 }
 
