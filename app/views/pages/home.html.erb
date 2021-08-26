@@ -1,34 +1,75 @@
 <div class="homepage-banner">
   <div class="background-image">
-    <%= image_tag asset_path('background-image-homepage.png') %>
+    <%= image_tag asset_path('homepage-potential4.jpg') %>
   </div>
 </div>
 
 <div class="body">
   <div class="search-bar">
-    <p>What?</p> <p>When?</p>
+    <div class="button1">
+      <a href="">What?</a>
+    </div>
+    <div class="button2">
+      <a href="">When?</a>
+    </div>
   </div>
   <div class="subheading">
     <h4>What do you want to learn?</h4>
   </div>
 
   <div class="cards">
-    <p>Front-end Development</p>
-    <p>Back-end Development</p>
-    <p>Full stack Development</p>
+    <div class="card1">
+      <a href="">Front-End Development</a>
+    </div>
+    <div class="card2">
+      <a href="">Back-End Development</a>
+    </div>
+    <div class="card3">
+      <a href="">Full Stack Development</a>
+    </div>
   </div>
 
   <div class="subheading">
     <h4>Some of our TA's...</h4>
   </div>
 
+  <div class="list-of-TAs">
+    <div class="TA-one">
+      <%= image_tag asset_path('TAimage1.png') %>
+      <h5>Megan Thresh</h5>
+      <p>Full Stack Developer
+      JavaScript, Ruby, CSS
+      London</p>
+    </div>
+    <div class="TA-two">
+      <%= image_tag asset_path('TA-image2.png') %>
+      <h5>Patricia Falandysz</h5>
+      <p>Front-End Developer
+      Paris</p>
+    </div>
+    <div class="TA-three">
+      <%= image_tag asset_path('TAimage3.png') %>
+      <h5>Saile Ribeiro</h5>
+      <p>Full Stack Developer
+      Python, React, JavaScript
+      Sao Paulo</p>
+    </div>
+    <div class="TA-four">
+      <%= image_tag asset_path('TAimage4.png') %>
+      <h5>Diego Garza</h5>
+      <p>Full Stack Developer
+      Ruby, Rails, Front-end
+      London</p>
+    </div>
+  </div>
+
   <div class="taButton">
-    <%= link_to 'See all the TAs we have', teachers_path, class: "btn btn-primary" %>
+    <%= link_to 'See all the TAs we have', teachers_path %>
   </div>
 
   <% if user_signed_in? %>
-    <%= link_to 'Register yourself as a TA', new_teacher_path, class: "btn btn-primary" %>
+    <%= link_to 'Register yourself as a TA', new_teacher_path %>
   <% else %>
-    <% link_to 'Register yourself as a TA', new_teacher_path, class: "btn btn-primary" %>
+    <% link_to 'Register yourself as a TA', new_teacher_path%>
   <% end %>
 </div>
