@@ -1,2 +1,13 @@
-<h1>Teachers#index</h1>
-<p>Find me in app/views/teachers/index.html.erb</p>
+<div class="custom-container">
+  <div class="header">
+    <h1 class="pt-5">Our Teachers</h1>
+  </div>
+
+  <div class="teacher_card_container">
+    <div class="teacher_cards">
+      <%= render @teachers %>
+    </div>
+  </div>
+</div>
+
+<%= link_to 'Home', root_path, class: "path-buttons" %>

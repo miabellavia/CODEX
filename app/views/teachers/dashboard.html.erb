@@ -1,2 +1,27 @@
-<h1>Teachers#dashboard</h1>
-<p>Find me in app/views/teachers/dashboard.html.erb</p>
+<div class="list-booking pt-5">
+  <div class="container">
+  <h1 class="mt-4"> Your bookings </h1>
+    <ul class="list">
+
+      <% @bookings.each do |booking| %>
+
+        <li class="list-item"><%= image_tag "https://kitt.lewagon.com/placeholder/users/#{booking.teacher.user.username}", class: "avatar-large" %>
+
+          <div class="list-content">
+            <%= booking.teacher.user.first_name %> <%= booking.teacher.user.last_name %>
+           <p>Start Date: <%= booking.start_time.strftime('%Y-%m-%d') %> End Date: <%= booking.end_time.strftime('%Y-%m-%d') %></p>
+          </div>
+
+          <div class="list-actions a">
+            <%= link_to " Edit" , edit_booking_path(booking), class:"card-btn fas fa-pencil-alt" %>
+            <%= link_to " Delete" , booking_path(booking), method: :delete, data: { confirm: 'Are you sure?' }, class:"card-btn far fa-trash-alt" %>
+          </div>
+        </li>
+      <% end %>
+    </ul>
+  </div>
+</div>
+
+</div>
+<%= link_to "Home Page" , teachers_path, class:"card-solid" %>
+</div>

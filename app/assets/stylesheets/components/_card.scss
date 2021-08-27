@@ -1,0 +1,35 @@
+.teacher_card-category {
+  margin: 40px 16px 20px 16px;
+  background-size: cover;
+  background-position: center;
+  height: 180px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+  border-radius: 5px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  text-align: center;
+  position: relative;
+}
+
+.teacher_card-category:hover {
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+  align-items: center;
+  font-size: x-large;
+}
+
+.teacher_cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-gap: 16px;
+}
+
+.teacher_card_text {
+  position: absolute;
+  top: 300px;
+}
