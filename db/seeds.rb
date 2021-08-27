@@ -21,10 +21,11 @@ end
 
 puts 'Creating Teachers...'
 
-10.times do
+20.times do
   teacher = Teacher.new(
     user_id: rand(1..30),
     description: Faker::Lorem.sentence,
+    price: rand(100..20000),
     category: ["Front-End Specialist", "Back-End Specialist", "Full Stack Specialist"].sample
   )
   teacher.save
