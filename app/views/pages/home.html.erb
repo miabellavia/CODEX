@@ -6,11 +6,11 @@
 
 <div class="body">
   <div class="search-bar">
-  
-    <div class="button1">
+
+    <div class="button1 px-5">
     <%= link_to 'SHOW ALL TA\'s', teachers_path%>
     </div>
-    <div class="button2">
+    <div class="button2 px-5">
     <%= link_to 'REGISTER AS TA', new_teacher_path %>
     </div>
   </div>
@@ -64,13 +64,18 @@
     </div>
   </div>
 
-  <div class="taButton">
-    <%= link_to 'See all the TAs we have', teachers_path, class:"path-buttons" %>
+<br>
+<br>
+
+  <div>
+    <% if user_signed_in? %>
+      <%= link_to 'See all the TAs we have', teachers_path, class:"path-buttons py-3 px-5" %>
+      <%= link_to 'Register yourself as a TA', new_teacher_path, class: "path-buttons py-3 px-5" %>
+    <% else %>
+      <%= link_to 'See all the TAs we have', teachers_path, class:"path-buttons py-3 px-5" %>
+    <% end %>
   </div>
 <br>
-  <% if user_signed_in? %>
-    <%= link_to 'Register yourself as a TA', new_teacher_path, class: "path-buttons" %>
-  <% else %>
-    <% link_to 'Register yourself as a TA', new_teacher_path %>
-  <% end %>
+<br>
+
 </div>

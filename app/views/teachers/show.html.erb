@@ -9,7 +9,7 @@
       <br>
       <div class="text" id="category"><%= @teacher.category %></div>
       <br>
-      <div class="text" id="price"><%= "£#{@teacher.price} per day" %></div>
+      <div class="text" id="price"><%= "£#{@teacher.price.to_i} per day" %></div>
       <br>
 
 
@@ -29,7 +29,7 @@
          <%= @teacher.description.capitalize %>
        </div>
      </div>
-     
+
    </div>
    <div class="panel panel-default">
      <div class="panel-heading" role="tab" id="headingThree">

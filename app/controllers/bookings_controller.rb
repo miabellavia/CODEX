@@ -35,7 +35,7 @@ class BookingsController < ApplicationController
     @booking = current_user.bookings.new(booking_params)
     @booking.teacher = @teacher
     if @booking.save
-      redirect_to teacher_dashboard_path(current_user), notice: 'You created a new Booking!'
+      redirect_to teacher_dashboard_path(current_user), alert: 'You created a new Booking! Your Teacher will contact you in 24 hours.'
     else
       render :new
     end
@@ -46,8 +46,9 @@ class BookingsController < ApplicationController
   end
 
   def update
-    if @booking.update(booking_params)
-      raise
+    @booking = current_user.bookings[0].find(params[:id])
+    @booking.update(booking_params)
+    if @booking.save
       redirect_to teacher_dashboard_path(current_user), notice: 'The booking is updated.'
     else
       render :edit

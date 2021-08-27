@@ -37,6 +37,12 @@
   text-align: start;
 }
 
+.list .list-content a:hover {
+  text-decoration: none;
+  font-weight: bolder;
+  color: #AB87FF;
+}
+
 .list p {
   margin: 0;
   line-height: 1.4;
