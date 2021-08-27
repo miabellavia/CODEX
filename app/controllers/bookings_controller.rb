@@ -1,4 +1,5 @@
 class BookingsController < ApplicationController
+
   def index
     @bookings = current_user.bookings #.where('start_time >= ?', Time.current)
     if @bookings.empty?
@@ -41,11 +42,16 @@ class BookingsController < ApplicationController
   end
 
   def edit
+    @booking = current_user.bookings.find(params[:id])
   end
 
   def update
-    @booking.update(booking_params)
-    redirect_to teacher_dashboard_path(current_user), notice: 'The booking is updated.'
+    if @booking.update(booking_params)
+      raise
+      redirect_to teacher_dashboard_path(current_user), notice: 'The booking is updated.'
+    else
+      render :edit
+    end
   end
 
   private

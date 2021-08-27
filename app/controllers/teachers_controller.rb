@@ -33,8 +33,8 @@ class TeachersController < ApplicationController
 
   def dashboard
     @user = current_user
-    @bookings = Booking.all
-    @teacher = Teacher.find(params[:teacher_id])
+    @bookings = current_user.bookings
+    # @teacher = current_user.bookings.teacher.id
   end
 
   def show
