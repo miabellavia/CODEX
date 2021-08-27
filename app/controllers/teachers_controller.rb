@@ -13,7 +13,7 @@ class TeachersController < ApplicationController
     @teacher = Teacher.new(teacher_params)
     @teacher.user = current_user
     if @teacher.save
-      redirect_to teacher_path(@teacher), notice: 'Your teacher profile was successfully created.'
+      redirect_to teacher_path(@teacher), alert: 'Your teacher profile was successfully created.'
     else
       render :new
     end
@@ -25,7 +25,7 @@ class TeachersController < ApplicationController
 
   def update
     if @teacher.update(teacher_params)
-      redirect_to teacher_path(@teacher), notice: 'Your teacher profile was successfully updated.'
+      redirect_to teacher_path(@teacher), alert: 'Your teacher profile was successfully updated.'
     else
       render :edit
     end
@@ -43,7 +43,7 @@ class TeachersController < ApplicationController
 
   def destroy
     @teacher.destroy
-    redirect_to root_path, notice: 'You have successfully deleted your teacher profile.'
+    redirect_to root_path, alert: 'You have successfully deleted your teacher profile.'
   end
 
   private

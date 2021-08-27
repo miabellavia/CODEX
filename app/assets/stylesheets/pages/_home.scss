@@ -5,7 +5,7 @@ body {
   object-position: center;
   text-align: center;
   background-color: black;
-  color:white;
+  color: white;
 }
 
 img {
@@ -39,20 +39,28 @@ img {
   display: inline-block;
   margin-left: 20px;
   margin-right: 20px;
-  margin-top: -350px;
   font-size: 40px;
   list-style: none;
   color: white;
+  border: 1px solid white;
+  position: relative;
+  bottom: 350px;
+  border-radius: 16px;
+  padding: 16px;
 }
 
 .button2 {
   display: inline-block;
   margin-left: 20px;
   margin-right: 20px;
-  margin-top: -350px;
   font-size: 40px;
   list-style: none;
   color: white;
+  border: 1px solid white;
+  position: relative;
+  bottom: 350px;
+  border-radius: 16px;
+  padding: 16px;
 }
 
 .subheading {
