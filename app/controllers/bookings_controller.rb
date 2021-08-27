@@ -1,4 +1,5 @@
 class BookingsController < ApplicationController
+
   def index
     @bookings = current_user.bookings #.where('start_time >= ?', Time.current)
     if @bookings.empty?
