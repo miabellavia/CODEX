@@ -88,10 +88,10 @@ h4 {
 }
 
 .card1 {
-  font-size: 20px;
+  font-size: 40px;
   background-color: black;
-  height: 350px;
-  width: 380px;
+  height: 380px;
+  width: 400px;
   border-radius: 20px;
   list-style: none;
   text-transform: capitalize;
@@ -103,16 +103,22 @@ h4 {
 }
 
 .card1 :hover {
-  color: #AB87FF;
+  background-color: rgba($color: #AB87FF, $alpha: 0.6);
+  height: 380px;
+  width: 400px;
+  border-radius: 20px;
+  color: white;
   text-decoration: none;
+  padding-top: 130px;
+  text-decoration: underline;
 }
 
 .card2{
-  font-size: 20px;
+  font-size: 40px;
   color: black;
   background-color: black;
-  height: 350px;
-  width: 380px;
+  height: 380px;
+  width: 400px;
   border-radius: 20px;
   list-style: none;
   text-transform: capitalize;
@@ -124,16 +130,22 @@ h4 {
 }
 
 .card2 :hover {
-  color: #AB87FF;
+  background-color: rgba($color: #AB87FF, $alpha: 0.6);
+  height: 380px;
+  width: 400px;
+  border-radius: 20px;
+  color: white;
   text-decoration: none;
+  padding-top: 130px;
+  text-decoration: underline;
 }
 
 .card3 {
-  font-size: 20px;
-  color: black;
+  font-size: 40px;
+  color: white;
   background-color: black;
-  height: 350px;
-  width: 380px;
+  height: 380px;
+  width: 400px;
   border-radius: 20px;
   list-style: none;
   text-transform: capitalize;
@@ -145,8 +157,15 @@ h4 {
 }
 
 .card3 :hover {
-  color: #AB87FF;
+  background-size: 100% .1em;
+  background-color: rgba($color: #AB87FF, $alpha: 0.6);
+  height: 380px;
+  width: 400px;
+  border-radius: 20px;
+  color: white;
   text-decoration: none;
+  padding-top: 130px;
+  text-decoration: underline;
 }
 
 a {
@@ -211,4 +230,29 @@ a {
 
 .TA-four p {
   color: white;
+}
+
+.taButton {
+  margin-top: 100px;
+  font-size: 16px;
+  background-color: rgba($color: #AB87FF, $alpha: 0.6);
+  width: 240px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 600px;
+  border-radius: 20px;
+}
+
+.taButton :hover {
+  background-color: #AB87FF;
+  border-radius: 25px;
+  width: 240px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  text-decoration: none;
 }
