@@ -1,13 +1,7 @@
-<<<<<<< HEAD
 <div class="container">
   <h1 class="pt-5">Edit</h1>
 
   <%= simple_form_for @booking do |f| %>
-=======
-<h1 class="pt-5">Edit</h1>
-
- <%= simple_form_for @booking do |f| %>
->>>>>>> 0bc95107693018fb4c3c924719eb31f74ec55d8e
     <%= f.error_notification %>
     <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
 
@@ -20,7 +14,4 @@
       <%= f.submit %>
     </div>
   <% end %>
-<<<<<<< HEAD
 </div>
-=======
->>>>>>> 0bc95107693018fb4c3c924719eb31f74ec55d8e
