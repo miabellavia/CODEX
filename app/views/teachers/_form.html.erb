@@ -1,16 +1,16 @@
 <div class='form'>
 <div class="container">
 <h3 class="pt-5 text-white">Make yourself a TA</h3>
+<% categories = ["What do you specialise in?", "Front-End Specialist", "Back-End Specialist", "Full Stack Specialist"] %>
 <br>
   <%= simple_form_for(@teacher) do |f| %>
     <%= f.input :description, class: 'input-new', placeholder: 'Please enter a description about yourself', label: false  %>
     <%= f.input :price, class: 'input-new', placeholder: 'What price do you charge per day? (Input in GBP)', label: false %>
-    <%= f.select :category, Teacher::CATEGORIES, label: 'What do you specialise in?' %>
+    <%= f.select :category, categories, style: "text-align: center;" %>
 <div>
   <br>
-    <%= f.button :submit, class: 'path-buttons'%>
+    <%= f.button :submit, class: 'path-buttons py-3 px-5'%>
   </div>
   </div>
   <% end %>
   </div>
-

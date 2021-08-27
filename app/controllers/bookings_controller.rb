@@ -35,7 +35,7 @@ class BookingsController < ApplicationController
     @booking = current_user.bookings.new(booking_params)
     @booking.teacher = @teacher
     if @booking.save
-      redirect_to teacher_dashboard_path(current_user), alert: 'You created a new Booking! Your Teacher will contact you in 24 hours.'
+      redirect_to teacher_dashboard_path(current_user), alert: 'You created a new Booking! Your Teacher will contact you as soon as they have accepted your booking'
     else
       render :new
     end
