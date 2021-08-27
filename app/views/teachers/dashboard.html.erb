@@ -6,10 +6,13 @@
       <% @bookings.each do |booking| %>
 
         <li class="list-item"><%= image_tag "https://kitt.lewagon.com/placeholder/users/#{booking.teacher.user.username}", class: "avatar-large" %>
-
           <div class="list-content">
-            <%= booking.teacher.user.first_name %> <%= booking.teacher.user.last_name %>
-           <p>Start Date: <%= booking.start_time.strftime('%Y-%m-%d') %> End Date: <%= booking.end_time.strftime('%Y-%m-%d') %></p>
+            <%= link_to teacher_path(booking.teacher) do %>
+              <div>
+                <%= booking.teacher.user.first_name %> <%= booking.teacher.user.last_name %>
+              </div>
+            <% end %>
+            <p>Start Date: <%= booking.start_time.strftime('%Y-%m-%d') %> End Date: <%= booking.end_time.strftime('%Y-%m-%d') %></p>
           </div>
 
           <div class="list-actions a">
