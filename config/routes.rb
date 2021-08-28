@@ -4,8 +4,8 @@ Rails.application.routes.draw do
 
   resources :teachers do
     get '/dashboard', to: 'teachers#dashboard'
-    resources :bookings, only: [:new, :create]
+    resources :bookings, only: %i[new create]
   end
 
-  resources :bookings, only: [:index, :show, :edit, :update, :destroy]
+  resources :bookings, only: %i[index show edit update destroy]
 end
