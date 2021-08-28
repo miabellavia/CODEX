@@ -25,8 +25,9 @@ puts 'Creating Teachers...'
   teacher = Teacher.new(
     user_id: rand(1..30),
     description: Faker::Quote.famous_last_words,
-    price: rand(100..20000),
-    category: ["Front-End Specialist", "Back-End Specialist", "Full Stack Specialist"].sample
+    price: rand(12..2000),
+    category: ["Front-End Specialist", "Back-End Specialist",
+               "Full Stack Specialist"].sample
   )
   teacher.save
 end
