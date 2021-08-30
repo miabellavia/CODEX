@@ -67,17 +67,14 @@
 }
 
 .trick:hover img {
-  -webkit-transform: scale(1);
   transform: scale(1);
 }
 
 #overlay {
-  -webkit-border-radius: 50%;
-  -moz-border-radius: 50%;
+  border-radius: 50%;
   padding: 0 0 0 0;
   opacity: 1.0;
-  -webkit-transition: opacity 2.25s ease;
-  -moz-transition: opacity 10.25s ease;
+  transition: opacity 2.25s ease;
   height: 175px;
 }
 
