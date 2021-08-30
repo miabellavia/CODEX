@@ -46,7 +46,7 @@ class BookingsController < ApplicationController
   end
 
   def update
-    @booking = current_user.bookings[0].find(params[:id])
+    @booking = current_user.bookings.find(params[:id])
     @booking.update(booking_params)
     if @booking.save
       redirect_to teacher_dashboard_path(current_user), notice: 'The booking is updated.'
